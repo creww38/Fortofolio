@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Developer portfolio 3D</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen | Creative Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  </head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">My Fortofolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div id="canvas-container"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    <span class="gradient-text">Creative</span><br>
+                    Developer
+                </h1>
+                <p class="typewriter">Building digital experiences that matter</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About <span>Me</span></h2>
+            <div class="about-grid">
+                <div class="about-image fade-in">
+                    <div class="hexagon-glow"></div>
+                    <div class="hexagon"></div>
+                </div>
+                <div class="about-text fade-in">
+                    <h3>Turning Ideas Into Reality</h3>
+                    <p>
+                        I'm a <span class="highlight">full-stack developer</span> with 5+ years of experience crafting 
+                        <span class="highlight">modern web applications</span>. I specialize in building scalable 
+                        solutions using cutting-edge technologies. My passion lies in creating intuitive user 
+                        experiences and solving complex problems with elegant code.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source, 
+                        or sharing knowledge with the developer community.
+                    </p>
+                    <div class="skills">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">react.js</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured <span>Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image project-1"></div>
+                    <div class="project-content">
+                        <h3>Analytics Dashboard</h3>
+                        <p>A real-time analytics platform with interactive charts, data visualization, and customizable reports.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">D3.js</span>
+                            <span class="project-tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image project-2"></div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-featured online store with payment processing, inventory management, and admin dashboard.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Next.js</span>
+                            <span class="project-tag">Stripe</span>
+                            <span class="project-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image project-3"></div>
+                    <div class="project-content">
+                        <h3>Developer Tools</h3>
+                        <p>A suite of productivity tools for developers including API tester, code formatter, and DB client.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Electron</span>
+                            <span class="project-tag">TypeScript</span>
+                            <span class="project-tag">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Get In <span>Touch</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Let's Create Something Amazing</h3>
+                    <p>
+                        Have a project in mind or just want to chat? I'm always open to discussing 
+                        new opportunities and creative ideas. Drop me a message and I'll get back 
+                        to you as soon as possible.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/Creww38" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form fade-in">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Abdul Aziz. All rights reserved..</p>
+        </div>
+    </footer>
+  </body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
