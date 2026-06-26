@@ -1,188 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Developer portfolio 3D</title>
-    <link rel="stylesheet" href="./style.css">
-
-  </head>
-    
-  <body>
-  <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Chen | Creative Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdul Aziz — Creative Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="logo">My Fortofolio</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div id="canvas-container"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1>
-                    <span class="gradient-text">Creative</span><br>
-                    Developer
-                </h1>
-                <p class="typewriter">Building digital experiences that matter</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Work</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title fade-in">About <span>Me</span></h2>
-            <div class="about-grid">
-                <div class="about-image fade-in">
-                    <div class="hexagon-glow"></div>
-                    <div class="hexagon"></div>
-                </div>
-                <div class="about-text fade-in">
-                    <h3>Turning Ideas Into Reality</h3>
-                    <p>
-                        I'm a <span class="highlight">full-stack developer</span> with 5+ years of experience crafting 
-                        <span class="highlight">modern web applications</span>. I specialize in building scalable 
-                        solutions using cutting-edge technologies. My passion lies in creating intuitive user 
-                        experiences and solving complex problems with elegant code.
-                    </p>
-                    <p>
-                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source, 
-                        or sharing knowledge with the developer community.
-                    </p>
-                    <div class="skills">
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">Next.js</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Express.js</span>
-                        <span class="skill-tag">react.js</span>
-                        <span class="skill-tag">Docker</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-text">AZIZ</div>
+  <div class="loader-bar-wrap"><div class="loader-bar" id="loader-bar"></div></div>
+  <div class="loader-pct" id="loader-pct">0%</div>
+</div>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section-title fade-in">Featured <span>Projects</span></h2>
-            <div class="projects-grid">
-                <div class="project-card fade-in">
-                    <div class="project-image project-1"></div>
-                    <div class="project-content">
-                        <h3>Analytics Dashboard</h3>
-                        <p>A real-time analytics platform with interactive charts, data visualization, and customizable reports.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">D3.js</span>
-                            <span class="project-tag">Node.js</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card fade-in">
-                    <div class="project-image project-2"></div>
-                    <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>Full-featured online store with payment processing, inventory management, and admin dashboard.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Next.js</span>
-                            <span class="project-tag">Stripe</span>
-                            <span class="project-tag">PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card fade-in">
-                    <div class="project-image project-3"></div>
-                    <div class="project-content">
-                        <h3>Developer Tools</h3>
-                        <p>A suite of productivity tools for developers including API tester, code formatter, and DB client.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Electron</span>
-                            <span class="project-tag">TypeScript</span>
-                            <span class="project-tag">SQLite</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- FLOATING PROJECT PREVIEW -->
+<div class="project-preview" id="proj-preview">
+  <canvas id="prev-canvas"></canvas>
+</div>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title fade-in">Get In <span>Touch</span></h2>
-            <div class="contact-grid">
-                <div class="contact-info fade-in">
-                    <h3>Let's Create Something Amazing</h3>
-                    <p>
-                        Have a project in mind or just want to chat? I'm always open to discussing 
-                        new opportunities and creative ideas. Drop me a message and I'll get back 
-                        to you as soon as possible.
-                    </p>
-                    <div class="social-links">
-                        <a href="https://github.com/Creww38" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                <form class="contact-form fade-in">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+<!-- ─── NAV ─────────────────────────────────────────────────── -->
+<nav id="main-nav">
+  <a href="#home" class="nav-logo">Abdul<span>.</span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Abdul Aziz. All rights reserved..</p>
-        </div>
-    </footer>
-  </body>
-</html>
-    <script  src="./script.js"></script>
+<!-- ─── HERO ─────────────────────────────────────────────────── -->
+<section class="hero" id="home">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Creative Developer — Jakarta, Indonesia</div>
+    <h1 class="hero-headline">
+      <span class="line"><span>Crafting</span></span>
+      <span class="line"><span><em>Digital</em></span></span>
+      <span class="line"><span>Experiences</span></span>
+    </h1>
+    <p class="hero-sub">
+      Full-stack developer building scalable, elegant web applications. 
+      Where precision meets artistry.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-gold">View Work</a>
+      <a href="#contact" class="btn-ghost">Let's Talk</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line" id="scroll-line"></div>
+    <span class="scroll-label">Scroll to explore</span>
+  </div>
+  <div class="hero-stats">
+    <div>
+      <div class="stat-num">5<span>+</span></div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div>
+      <div class="stat-num">30<span>+</span></div>
+      <div class="stat-label">Projects Shipped</div>
+    </div>
+    <div>
+      <div class="stat-num">12<span>+</span></div>
+      <div class="stat-label">Happy Clients</div>
+    </div>
+  </div>
+</section>
 
-  </body>
-  
+<!-- ─── ABOUT ─────────────────────────────────────────────────── -->
+<section class="about-bg" id="about">
+  <div class="section-wrapper">
+    <div class="about-grid">
+      <div>
+        <div class="about-canvas-wrap reveal-left">
+          <canvas id="about-canvas"></canvas>
+          <div class="about-canvas-frame"></div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-label reveal">About</p>
+        <h2 class="section-title reveal">Turning <em>Ideas</em><br>Into Reality</h2>
+        <div class="about-divider reveal"></div>
+        <p class="reveal">
+          I'm a <strong>full-stack developer</strong> with 5+ years of experience crafting 
+          modern web applications. I specialize in building scalable solutions using 
+          cutting-edge technologies.
+        </p>
+        <p class="reveal">
+          My passion lies in creating <strong>intuitive user experiences</strong> and solving 
+          complex problems with elegant, maintainable code. Every project is an opportunity 
+          to push the boundaries of what's possible on the web.
+        </p>
+        <div class="skills-row reveal">
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">TypeScript</span>
+          <span class="skill-pill">Next.js</span>
+          <span class="skill-pill">React</span>
+          <span class="skill-pill">Node.js</span>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">Express.js</span>
+          <span class="skill-pill">Docker</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROJECTS ──────────────────────────────────────────────── -->
+<section id="projects">
+  <div class="section-wrapper">
+    <div class="projects-header">
+      <div>
+        <p class="section-label reveal">Selected Work</p>
+        <h2 class="section-title reveal" style="margin-bottom:0">Featured <em>Projects</em></h2>
+      </div>
+      <div class="projects-count reveal">03</div>
+    </div>
+    <div class="projects-list">
+      <div class="project-item reveal" data-proj="0">
+        <div class="project-num">01</div>
+        <div class="project-info">
+          <h3>Analytics Dashboard</h3>
+          <div class="project-tags-row">
+            <span class="ptag">React</span>
+            <span class="ptag">·</span>
+            <span class="ptag">D3.js</span>
+            <span class="ptag">·</span>
+            <span class="ptag">Node.js</span>
+          </div>
+        </div>
+        <div class="project-arrow">&#8599;</div>
+      </div>
+      <div class="project-item reveal" data-proj="1">
+        <div class="project-num">02</div>
+        <div class="project-info">
+          <h3>E-Commerce Platform</h3>
+          <div class="project-tags-row">
+            <span class="ptag">Next.js</span>
+            <span class="ptag">·</span>
+            <span class="ptag">Stripe</span>
+            <span class="ptag">·</span>
+            <span class="ptag">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="project-arrow">&#8599;</div>
+      </div>
+      <div class="project-item reveal" data-proj="2">
+        <div class="project-num">03</div>
+        <div class="project-info">
+          <h3>Developer Tools Suite</h3>
+          <div class="project-tags-row">
+            <span class="ptag">Electron</span>
+            <span class="ptag">·</span>
+            <span class="ptag">TypeScript</span>
+            <span class="ptag">·</span>
+            <span class="ptag">SQLite</span>
+          </div>
+        </div>
+        <div class="project-arrow">&#8599;</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MID 3D SCENE ──────────────────────────────────────────── -->
+<div class="scene-section">
+  <canvas id="mid-canvas"></canvas>
+  <div class="scene-text-overlay">
+    <div class="scene-big-text">CRAFT</div>
+    <div class="scene-badge">Available For Work</div>
+  </div>
+</div>
+
+<!-- ─── CONTACT ───────────────────────────────────────────────── -->
+<section class="contact-bg" id="contact">
+  <div class="section-wrapper">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <p class="section-label reveal">Contact</p>
+        <h2 class="section-title reveal">Let's Build<br><em>Together</em></h2>
+        <a href="mailto:hello@abdulaziz.dev" class="big-email reveal">hello@abdulaziz.dev</a>
+        <div class="contact-meta">
+          <div class="meta-row reveal">
+            <span class="meta-label">Location</span>
+            <span class="meta-val">Jakarta, Indonesia</span>
+          </div>
+          <div class="meta-row reveal">
+            <span class="meta-label">Availability</span>
+            <span class="meta-val">Open to Opportunities</span>
+          </div>
+          <div class="meta-row reveal">
+            <span class="meta-label">Response</span>
+            <span class="meta-val">Within 24 hours</span>
+          </div>
+        </div>
+        <div class="social-row reveal">
+          <a href="https://github.com/Creww38" class="soc-link" target="_blank">GH</a>
+          <a href="#" class="soc-link">LI</a>
+          <a href="#" class="soc-link">TW</a>
+          <a href="mailto:hello@abdulaziz.dev" class="soc-link">&#9993;</a>
+        </div>
+      </div>
+      <div class="contact-form reveal-right">
+        <div class="form-field" id="ff-name">
+          <label>Your Name</label>
+          <input type="text" id="f-name" autocomplete="off">
+        </div>
+        <div class="form-field" id="ff-email">
+          <label>Email Address</label>
+          <input type="email" id="f-email" autocomplete="off">
+        </div>
+        <div class="form-field" id="ff-msg">
+          <label>Your Message</label>
+          <textarea id="f-msg"></textarea>
+        </div>
+        <div class="form-submit">
+          <button class="btn-gold" type="button">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-logo">Abdul<span>.</span></div>
+  <p>&copy; 2026 Abdul Aziz. Crafted with intention.</p>
+  <p style="font-size:.7rem;color:var(--text-dim);letter-spacing:.06em;">Jakarta, ID</p>
+</footer>
+
+<!-- ─── SCRIPTS ────────────────────────────────────────────────── -->
+<script  src="./script.js"></script>
+</body>
 </html>
